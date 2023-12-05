@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import Foot from './footer'
 const name = 'Chen pipi'
 export const siteTitle = 'Next.js Sample Website'
 
@@ -49,6 +50,7 @@ theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2F
           </Link>
         </div>
       )}
+      <Foot/>
     </div>
   )
 }
