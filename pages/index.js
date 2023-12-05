@@ -41,7 +41,11 @@ export default function Home({allPostsData, postList} ) {
       {/* /api/hello页面 */}
       <Link href={'/api/hello'} prefetch={true}>
         <span style={{color: 'blue', fontWeight: 'bold', fontSize: '1.5rem'}}>hello</span>
-        
+      </Link>
+      <br/>
+       {/* /posts/first-post页面 */}
+       <Link href={'/posts/first-post'} prefetch={true}>
+        <span style={{color: 'blue', fontWeight: 'bold', fontSize: '1.5rem'}}>first-post</span>
       </Link>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
