@@ -8,11 +8,7 @@ import utilStyles from '../styles/utils.module.css'
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData()
-    // let postList = []
-    // await fetch('https://jsonplaceholder.typicode.com/posts')
-    //     .then(res => res.json())
-    //     .then(res => postList = res)
-    // console.log(postList)
+    
     return {
       props: {
         allPostsData,
@@ -47,6 +43,11 @@ export default function Home({allPostsData, postList} ) {
        <Link href={'/posts/first-post'} prefetch={true}>
         <span style={{color: 'blue', fontWeight: 'bold', fontSize: '1.5rem'}}>first-post</span>
       </Link>
+      <br/>
+      {/* /news/news页面 */}
+      <Link href={'/news/news'} prefetch={true}>
+        <span style={{color: 'blue', fontWeight: 'bold', fontSize: '1.5rem'}}>daily-news</span>
+      </Link>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
@@ -64,15 +65,7 @@ export default function Home({allPostsData, postList} ) {
             </li>
           ))}
         </ul>
-        {/* <div className={utilStyles.list}>
-            {postList.map((item, key) => {
-                return <div key="key"> 
-                      {item.id} <br/>
-                    {item.title} <br/>
-                    {item.body} <br/>
-                </div>
-            })}
-        </div> */}
+       
       </section>
     </Layout>
   )
