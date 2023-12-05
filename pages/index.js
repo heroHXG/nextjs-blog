@@ -8,15 +8,15 @@ import utilStyles from '../styles/utils.module.css'
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData()
-    let postList = []
-    await fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(res => res.json())
-        .then(res => postList = res)
+    // let postList = []
+    // await fetch('https://jsonplaceholder.typicode.com/posts')
+    //     .then(res => res.json())
+    //     .then(res => postList = res)
     // console.log(postList)
     return {
       props: {
         allPostsData,
-        postList
+        // postList
       }
     }
 }
@@ -24,7 +24,7 @@ export async function getStaticProps() {
 
 
 export default function Home({allPostsData, postList} ) {
-    console.log(postList)
+    // console.log(postList)
   return (
     <Layout home>
       <Head>
@@ -37,6 +37,13 @@ export default function Home({allPostsData, postList} ) {
           <a href="https://www.nextjs.cn/learn">our Next.js tutorial</a>.)
         </p>
       </section>
+
+      {/* /api/hello页面 */}
+      <Link href={'/api/hello'} prefetch={true}>
+        <span style={{color: 'blue', fontWeight: 'bold', fontSize: '1.5rem'}}>hello</span>
+        
+      </Link>
+
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
@@ -53,15 +60,15 @@ export default function Home({allPostsData, postList} ) {
             </li>
           ))}
         </ul>
-        <div className={utilStyles.list}>
-            {postList.map(item => {
-                return <div>
+        {/* <div className={utilStyles.list}>
+            {postList.map((item, key) => {
+                return <div key="key"> 
                       {item.id} <br/>
                     {item.title} <br/>
                     {item.body} <br/>
                 </div>
             })}
-        </div>
+        </div> */}
       </section>
     </Layout>
   )
