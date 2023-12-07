@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
@@ -42,6 +43,8 @@ theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2F
           </>
         )}
       </header>
+      <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>

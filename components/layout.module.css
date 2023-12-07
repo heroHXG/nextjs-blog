@@ -1,10 +1,7 @@
 
 /* 现在，让我们为布局添加一些样式。为此，我们将使用CSS Modules,它允许你在React组件中导入CSS文件。
 在组件目录下创建一个名为layout.module.css的文件，要使用CSS Modules，CSS文件名必须以.module. css结尾。内容如下:
-
 */
-
-
 .container {
     max-width: 36rem;
     padding: 0 1rem;

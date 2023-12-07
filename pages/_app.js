@@ -14,3 +14,5 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp
+
+/*不要在 _app.js 里面写业务内容，不然路由改变了，前端UI一直是_app.js 里的内容。应该在pages/index.js 里面写。*/ 

@@ -24,17 +24,7 @@ export default function News({newsList}) {
     console.log(newsList, newsList.length)
     return (
         <Layout>
-            {/* <div className={utilStyles.list}>
-                {newsList.map((item, id) => {
-                    return <div key={id}> 
-                        {item.id} <br/>
-                        {item.userId} <br/>
-                        {item.title} <br/>
-                        {item.body} <br/>
-                    </div>
-                })}
-            </div> */}
-
+           
             <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
                 <h2 className={utilStyles.headingLg}>News</h2>
                 <ul className={utilStyles.list}>

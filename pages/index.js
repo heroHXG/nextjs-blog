@@ -37,6 +37,11 @@ export default function Home() {
       <Link href={'/posts'} prefetch={true}>
         <span style={{color: 'blue', fontWeight: 'bold', fontSize: '1.5rem'}}>my-posts</span>
       </Link>
+      <br/>
+       {/* /user/index页面 */}
+       <Link href={'/user'} prefetch={true}>
+        <span style={{color: 'blue', fontWeight: 'bold', fontSize: '1.5rem'}}>user</span>
+      </Link>
     </Layout>
   )
 }
