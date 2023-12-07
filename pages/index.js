@@ -23,19 +23,19 @@ export default function Home() {
         <span style={{color: 'blue', fontWeight: 'bold', fontSize: '1.5rem'}}>hello</span>
       </Link>
       <br/>
-       {/* /posts/first-post页面 */}
-       <Link href={'/posts/first-post'} prefetch={true}>
-        <span style={{color: 'blue', fontWeight: 'bold', fontSize: '1.5rem'}}>first-post</span>
-      </Link>
-      <br/>
-      {/* /news/news页面 */}
-      <Link href={'/news/news'} prefetch={true}>
+      {/* /news/index页面 */}
+      <Link href={'/news'} prefetch={true}>
         <span style={{color: 'blue', fontWeight: 'bold', fontSize: '1.5rem'}}>daily-news</span>
       </Link>
       <br/>
       {/* /posts/index页面 */}
       <Link href={'/posts'} prefetch={true}>
         <span style={{color: 'blue', fontWeight: 'bold', fontSize: '1.5rem'}}>my-posts</span>
+      </Link>
+      <br/>
+       {/* /posts/first-post页面 */}
+       <Link href={'/posts/first-post'} prefetch={true}>
+        <span style={{color: 'blue', fontWeight: 'bold', fontSize: '1.5rem'}}>first-post</span>
       </Link>
       <br/>
        {/* /user/index页面 */}

@@ -1,4 +1,3 @@
-// import { getStaticProps } from "."
 import Link from 'next/link'
 import Layout, { siteTitle } from '../../components/layout'
 import {getStaticNews} from '../../lib/news'
@@ -9,22 +8,12 @@ export async function getStaticProps() {
     let {newsList} = await getStaticNews()
     return {
         props: {newsList}
-
     }
-
-    // let newsList = []
-    // await fetch('https://jsonplaceholder.typicode.com/posts')
-    //     .then(res => res.json())
-    //     .then(res => newsList = res)
-    // return {
-    //     props: {newsList}
-    // }
 }
 export default function News({newsList}) {
-    console.log(newsList, newsList.length)
+    // console.log(newsList, newsList.length)
     return (
         <Layout>
-           
             <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
                 <h2 className={utilStyles.headingLg}>News</h2>
                 <ul className={utilStyles.list}>
@@ -44,5 +33,4 @@ export default function News({newsList}) {
             </section>
         </Layout>
     )
-    
 }

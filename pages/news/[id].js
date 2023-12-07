@@ -6,11 +6,10 @@ import utilStyles from '../../styles/utils.module.css'
 
 export async function getStaticPaths() {
     let {newsId} = await getStaticNews()
-    /*
+    /* getStaticPaths必须返回特定格式的值
     Error: Extra keys returned from getStaticPaths in /news/[id] (newsId) Expected: { paths: [], fallback: boolean }
 See here for more info: https://nextjs.org/docs/messages/invalid-getstaticpaths-value
     */ 
-    // return {newsId}
     return {
         paths: newsId,
         fallback: false
@@ -19,7 +18,7 @@ See here for more info: https://nextjs.org/docs/messages/invalid-getstaticpaths-
 
 // 根据path获取具体的news content
 export async function getStaticProps({params}) {
-    console.log(params)
+    // console.log(params)
     let res = await getNewsContent(params?.id)
     return {
         props: {res}
@@ -27,7 +26,7 @@ export async function getStaticProps({params}) {
 }
 
 export default function New({res}) {
-    console.log(res)
+    // console.log(res)
     return (
         <Layout>
         <Head>
