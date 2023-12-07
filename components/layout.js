@@ -10,6 +10,7 @@ export const siteTitle = 'Next.js Sample Website'
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
+      {/* 使用head组件可以更改页面标题和元标记 */}
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Learn how to build a personal website using Next.js"/>
