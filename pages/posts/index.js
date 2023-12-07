@@ -24,6 +24,12 @@ export default function Posts({allPostsData}) {
             </Head>
             <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
                 <h2 className={utilStyles.headingLg}>Blog</h2>
+                {/* first-post链接 */}
+                <Link href={'/posts/first-post'} prefetch={true}>
+                    <span style={{color: 'blue', fontWeight: 'bold', fontSize: '1.5rem'}}>/posts/first-post</span>
+                </Link>
+                <hr/>
+                <hr/>
                 <ul className={utilStyles.list}>
                 {allPostsData.map(({ id, date, title }) => (
                     <li className={utilStyles.listItem} key={id}>
